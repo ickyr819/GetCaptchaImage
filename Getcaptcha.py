@@ -108,12 +108,13 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
         screenshot_path = os.path.join(upload_path, upload_path_filename)
         logging.info(f"驗證碼截圖並存檔至: {screenshot_path}")
         element.screenshot(screenshot_path)
+        logging.info("截圖和存檔成功")
 
         # 解除自動化控制
         driver.execute_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
         )
-        logging.info("截圖和存檔成功")
+
         messagebox.showinfo("Return", "驗證碼截取成功")
     except Exception as e:
         logging.error(f"發生錯誤: {e}")
