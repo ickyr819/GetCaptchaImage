@@ -50,9 +50,9 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
             element = WebDriverWait(driver, 15).until(
                 EC.visibility_of_element_located((By.XPATH, website_Xpath))
             )
-            logging.info("在main中找到element")
+            logging.info("在main中找到Xpath_element")
         except:
-            logging.info("在main中未找到element，開始在frame和iframe查詢")
+            logging.info("在main中未找到Xpath_element，開始在frame和iframe查詢")
             # 查找frames
             if element is None:
                 frames = driver.find_elements(By.TAG_NAME, "frame")
@@ -66,7 +66,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
                                 )
                             )
                             if element:
-                                logging.info("在frame中找到element")
+                                logging.info("在frame中找到Xpath_element")
                                 break
                         except:
                             driver.switch_to.default_content()
@@ -89,7 +89,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
                                 )
                             )
                             if element:
-                                logging.info("在iframe中找到element")
+                                logging.info("在iframe中找到Xpath_element")
                                 break
                         except:
                             driver.switch_to.default_content()
