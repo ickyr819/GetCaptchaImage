@@ -53,7 +53,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
             driver.maximize_window()
 
         # 瑞興
-        if url == "https://ebank.taipeistarbank.com.tw":
+        if url == "https://ebank.taipeistarbank.com.tw/":
             driver.execute_script("doLogin();")
         # ---------須執行javascript開啟網銀的網站---------#
 
