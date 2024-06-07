@@ -115,7 +115,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
 
         # 未找到元素
         if element is None:
-            logging.error("未找到指定的元素")
+            logging.error("未找到指定的元素，請檢查input")
             sys.exit(1)
 
         # 驗證碼截圖並存檔
