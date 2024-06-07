@@ -50,6 +50,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
                 "window.open('https://cobank.tcb-bank.com.tw/TCB.TWNB.CORP.WEB/','tcbcorpframe','resizable=yes, height=768, width=1024, scrollbars=yes, status=1, left=0, top=0, location=no');"
             )
             driver.switch_to.window(driver.window_handles[1])
+            driver.maximize_window()
 
         # 瑞興
         if url == "https://ebank.taipeistarbank.com.tw":
