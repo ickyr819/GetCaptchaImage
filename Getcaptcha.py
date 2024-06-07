@@ -44,7 +44,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
 
         # ---------須執行javascript開啟網銀的網站---------#
         # 合庫
-        if url == "https://cobank.tcb-bank.com.tw/TCB.TWNB.CORP.WEB/":
+        if url == "https://cobank.tcb-bank.com.tw/home/newIBHome.html":
             # 切到新開啟的視窗
             driver.execute_script(
                 "window.open('https://cobank.tcb-bank.com.tw/TCB.TWNB.CORP.WEB/','tcbcorpframe','resizable=yes, height=768, width=1024, scrollbars=yes, status=1, left=0, top=0, location=no');"
@@ -52,7 +52,7 @@ def get_captcha(url, website_Xpath, upload_path, upload_path_filename, log_path)
             driver.switch_to.window(driver.window_handles[1])
 
         # 瑞興
-        if url == "https://ebank.taipeistarbank.com.tw/":
+        if url == "https://ebank.taipeistarbank.com.tw":
             driver.execute_script("doLogin();")
         # ---------須執行javascript開啟網銀的網站---------#
 
